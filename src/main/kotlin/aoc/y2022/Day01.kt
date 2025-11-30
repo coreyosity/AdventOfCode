@@ -1,8 +1,7 @@
-package advent2022.sol
+package aoc.y2022
 
-import advent2022.Utils.getInput
-import advent2022.Utils.println
-import advent2022.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
     fun elves(input: List<String>): List<Elf> {
@@ -29,7 +28,7 @@ fun main() {
         return topElves[0].calories + topElves[1].calories + topElves[2].calories
     }
 
-    val input = readInput(getInput("Day01"))
+    val input = readInput(2022, "Day01")
     part1(input).println()
     part2(input).println()
 }

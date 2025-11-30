@@ -1,9 +1,7 @@
-package advent2024.sol
+package aoc.y2024
 
-import Utils.getInput
-import Utils.getTestInput
-import Utils.println
-import Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 import kotlin.math.abs
 
 fun main() {
@@ -49,9 +47,9 @@ fun main() {
         return count
     }
 
-    val testInput = readInput(getTestInput("Day02P1"))
+    val testInput = readInput(2024, "test/Day02P1")
     check(part1(testInput) == 2)
-    val input = readInput((getInput("Day02")))
+    val input = readInput(2024, "Day02")
     part1(input).println()
     check(part2(testInput) == 4)
     part2(input).println()

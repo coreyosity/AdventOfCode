@@ -1,7 +1,7 @@
-import Utils.getInput
-import Utils.getTestInput
-import Utils.println
-import Utils.readInput
+package aoc.y2024
+
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
 
@@ -77,7 +77,6 @@ fun main() {
     }
 
     fun part1(input: List<MutableList<String>>): Int {
-        // find ^, v, < or > in input list, get position coordinates
         var direction: Direction = Direction.UP
         var (row, cell) = 0 to 0
         input.forEachIndexed { y, list ->
@@ -105,10 +104,10 @@ fun main() {
         return traverse(input, row, cell, direction)
     }
 
-    val testInput = readInput(getTestInput("Day06P1"))
+    val testInput = readInput(2024, "test/Day06P1")
     var testInputList = testInput.map { it.toList().map { it.toString() }.toMutableList() }
     check(part1(testInputList) == 41)
-    val input = readInput(getInput("Day06"))
+    val input = readInput(2024, "Day06")
     part1(input.map { it.toList().map { it.toString() }.toMutableList() }).println()
 }
 

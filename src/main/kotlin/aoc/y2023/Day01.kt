@@ -1,9 +1,7 @@
-package advent2023.sol
+package aoc.y2023
 
-import advent2023.Utils.getInput
-import advent2023.Utils.getTestInput
-import advent2023.Utils.println
-import advent2023.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
     val wordConnector: Map<String, String> =
@@ -41,13 +39,13 @@ fun main() {
         return count
     }
 
-    val testInputP1 = readInput(getTestInput("Day01P1"))
+    val testInputP1 = readInput(2023, "test/Day01P1")
     check(part1(testInputP1) == 142)
 
-    val testInputP2 = readInput(getTestInput("Day01P2"))
+    val testInputP2 = readInput(2023, "test/Day01P2")
     check(part2(testInputP2) == 281)
 
-    val input = readInput(getInput("Day01"))
+    val input = readInput(2023, "Day01")
     part1(input).println()
     part2(input).println()
 }

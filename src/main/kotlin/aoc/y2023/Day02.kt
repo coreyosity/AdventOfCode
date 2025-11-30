@@ -1,9 +1,7 @@
-package advent2023.sol
+package aoc.y2023
 
-import advent2023.Utils.getInput
-import advent2023.Utils.getTestInput
-import advent2023.Utils.println
-import advent2023.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 val validBag = Bag(14, 12, 13)
 fun main() {
@@ -78,13 +76,13 @@ fun main() {
         return games.sumOf { powerSet(it.subsets) }
     }
 
-    val testInputP1 = readInput(getTestInput("Day02P1"))
+    val testInputP1 = readInput(2023, "test/Day02P1")
     check(part1(testInputP1) == 8)
 
-    val testInputP2 = readInput(getTestInput("Day02P2"))
+    val testInputP2 = readInput(2023, "test/Day02P2")
     check(part2(testInputP2) == 2286)
 
-    val input = readInput(getInput("Day02"))
+    val input = readInput(2023, "Day02")
     part1(input).println()
     part2(input).println()
 }

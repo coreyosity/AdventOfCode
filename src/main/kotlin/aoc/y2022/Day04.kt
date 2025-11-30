@@ -1,9 +1,7 @@
-package advent2022.sol
+package aoc.y2022
 
-import advent2022.Utils.getInput
-import advent2022.Utils.getTestInput
-import advent2022.Utils.println
-import advent2022.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 import java.util.Collections
 
 fun main() {
@@ -43,13 +41,13 @@ fun main() {
         return pairs.sumOf { partiallyContainedPair(it) }
     }
 
-    val testInputP1 = readInput(getTestInput("Day04P1"))
+    val testInputP1 = readInput(2022, "test/Day04P1")
     check(part1(testInputP1) == 2)
 
-    val testInputP2 = readInput(getTestInput("Day04P2"))
+    val testInputP2 = readInput(2022, "test/Day04P2")
     check(part2(testInputP2) == 4)
 
-    val input = readInput(getInput("Day04"))
+    val input = readInput(2022, "Day04")
     part1(input).println()
     part2(input).println()
 }

@@ -1,8 +1,7 @@
-package advent2022.sol
+package aoc.y2022
 
-import advent2022.Utils.getInput
-import advent2022.Utils.println
-import advent2022.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
 
@@ -132,7 +131,7 @@ fun main() {
         return score
     }
 
-    val input = readInput(getInput("Day02"))
+    val input = readInput(2022, "Day02")
     part1(input).println()
     part2(input).println()
 }

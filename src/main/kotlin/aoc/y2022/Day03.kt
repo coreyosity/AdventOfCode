@@ -1,9 +1,7 @@
-package advent2022.sol
+package aoc.y2022
 
-import advent2022.Utils.getInput
-import advent2022.Utils.getTestInput
-import advent2022.Utils.println
-import advent2022.Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
 
@@ -59,13 +57,13 @@ fun main() {
         return groups.sumOf { getPriority2(it) }
     }
 
-    val testInputP1 = readInput(getTestInput("Day03P1"))
+    val testInputP1 = readInput(2022, "test/Day03P1")
     check(part1(testInputP1) == 157)
 
-    val testInputP2 = readInput(getTestInput("Day03P2"))
+    val testInputP2 = readInput(2022, "test/Day03P2")
     check(part2(testInputP2) == 70)
 
-    val input = readInput(getInput("Day03"))
+    val input = readInput(2022, "Day03")
     part1(input).println()
     part2(input).println()
 }

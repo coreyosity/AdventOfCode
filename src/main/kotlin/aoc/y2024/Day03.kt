@@ -1,9 +1,7 @@
-package advent2024.sol
+package aoc.y2024
 
-import Utils.getInput
-import Utils.getTestInput
-import Utils.println
-import Utils.readInput
+import aoc.common.Utils.println
+import aoc.common.Utils.readInput
 
 fun main() {
 
@@ -54,9 +52,9 @@ fun main() {
         return count
     }
 
-    val testInput = readInput(getTestInput("Day03P1"))
+    val testInput = readInput(2024, "test/Day03P1")
     check(part1(testInput) == 161)
-    val input = readInput(getInput("Day03"))
+    val input = readInput(2024, "Day03")
     part1(input).println()
     part2(input).println()
 }
