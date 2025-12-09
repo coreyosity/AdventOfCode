@@ -10,6 +10,11 @@ object Utils {
         return resource.bufferedReader().readLines()
     }
 
+    fun readGrid(year: Int, name: String): Grid {
+        val lines = readInput(year, name)
+        return Grid(lines.map { it.toList() })
+    }
+
     fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
         .toString(16)
         .padStart(32, '0')
